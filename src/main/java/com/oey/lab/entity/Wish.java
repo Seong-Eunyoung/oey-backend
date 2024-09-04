@@ -29,5 +29,5 @@ public class Wish {
     private String type;
 
     @Column(name = "status")
-    private Boolean status; // 0:in process, 1:done
+    private Boolean status = false;
 }
