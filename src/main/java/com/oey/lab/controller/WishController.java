@@ -29,15 +29,4 @@ public class WishController {
         return new ResponseEntity<>(madeWish, HttpStatus.CREATED);
     }
 
-    @DeleteMapping
-    public ResponseEntity<String> deleteWish(@RequestBody WishDto wishDto) {
-        return null;
-    }
-
-
-
-
-
-
-
 }

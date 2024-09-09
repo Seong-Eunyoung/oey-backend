@@ -15,15 +15,11 @@ public class UserController {
 
     private final UserRepository userRepository;
 
-    @GetMapping
-    public ResponseEntity<Long> getUserId(@RequestBody String userName) {
+    @GetMapping("/{userName}")
+    public ResponseEntity<Long> getUserId(@PathVariable String userName) {
         System.out.println(userName);
         Long userId = userRepository.findByUserName(userName).orElseThrow().getId();
         return new ResponseEntity<>(userId, HttpStatus.CREATED);
     }
-
-
-
-
 
 }
